@@ -1,0 +1,6 @@
+DBUSER=         #database user connection
+DBPASS=         #database user password
+DBHOST=         #database host
+DBPORT=         #database port
+DBDIALECT=      #database dialect
+DBNAME=         #database schema name
