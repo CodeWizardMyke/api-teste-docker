@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('partials/components/head') %>
+<body>
+  <main>
+      <%- include('partials/components/header') %>
+      <section class="parallax">
+          <article class="container parallax-content">
+                <h1>BOOK STORE</h1>
+                <h4>Plataforma API: Desenvolvendo o Futuro da Integração e Automação</h4>
+                <p class="text-width">
+                    Nossa API foi meticulosamente projetada para proporcionar uma experiência fluida e eficiente, abrangendo várias
+                    áreas-chave de nossa plataforma. Seja você um desenvolvedor experiente ou alguém que está explorando a programação pela primeira vez,
+                    nossa API foi criada com a usabilidade em mente, oferecendo endpoints intuitivos e documentação detalhada para garantir uma integração
+                    bem-sucedida.
+                </p>
+          </article>
+      </section >
+      
+      <section class="section-content container">
+          <article class="">
+            <div class="content-article">
+              <h2 class="mb-4">Documentação</h2>
+              <div class="row doc-list ">
+    
+                  <div class="col-md-4">
+                      <h2>Crud</h2>
+                      <ul id="list-doc">
+                          <li id="crudbooks">Books</li>
+                          <li id="crudusers">Users</li>
+                          <li id="cruduserinfo">User Information</li>
+                          <li id="crudcart">Cart</li>
+                          <li id="crudpay">Payment</li>
+                          <li id="crudfb">Feedback</li>
+                      </ul>
+                  </div>
+    
+                  <div class="col-md-4">
+                      <h2>Advanced searches</h2>
+                      <ul id="list-doc">
+                          <li id="serachBooks">Books</li>
+                          <li id="searchUsers">Users</li>
+                          <li id="searchCart">Cart</li>
+                          <li id="searchPayment">Payment</li>
+                          <li id="searchFeedback">Feedback</li>
+                      </ul>
+                  </div>
+    
+                  <div class="col-md-4">
+                    <h2>Auth</h2>
+                    <ul id="list-doc">
+                        <li id="auth">Auth</li>
+                        <li id="token">Token invalid</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </article>
+    
+          <div class="bg-doc">
+            <article class="container">
+              <div class="documents_style" id="doc-select">
+
+                <!-- CRUD DOCUMENTATION START-->
+                <div id="crudbooks-doc" class="display-off"><%- include('partials/doc/BooksCrud') %></div>
+                <div id="crudusers-doc" class="display-off" ><%- include('partials/doc/UsersCrud') %></div>
+                <div id="cruduserinfo-doc" class="display-off" ><%- include('partials/doc/UsersInfoCrud') %></div>
+                <div id="crudcart-doc" class="display-off" ><%- include('partials/doc/CartCrud') %></div>
+                <div id="crudpay-doc" class="display-off" ><%- include('partials/doc/PaymentCrud') %></div>
+                <div id="crudfb-doc" class="display-off" ><%- include('partials/doc/FeedbackCrud') %></div>
+                <!-- CRUD DOCUMENTATION END-->
+
+                <!-- SEARCH DOCUMENTATION START-->
+                <div>
+                  <div id="serachBooks-doc" class="display-off" ><%- include('partials/doc/BooksSearch') %></div>
+                  <div id="searchUsers-doc" class="display-off" ><%- include('partials/doc/UsersSearch') %></div>
+                  <div id="searchPayment-doc" class="display-off" ><%- include('partials/doc/PaymentSearch') %></div>
+                  <div id="searchCart-doc" class="display-off" ><%- include('partials/doc/CartSearch') %></div>
+                  <div id="searchFeedback-doc" class="display-off" ><%- include('partials/doc/FeedbackSearch') %></div>
+                </div>
+                <!-- SEARCH DOCUMENTATION END-->
+
+                <div>
+                  <div id="auth-doc" class="display-off" ><%- include('partials/doc/Auth') %></div>
+                  <div id="token-doc" class="display-off" ><%- include('partials/doc/TokenInvalid') %></div>
+                </div>
+
+              </div>
+            </article>
+          </div>
+      </section>
+
+      <!-- documentação completa da api, sua visualização será feita atravez do click do usuário -->
+      
+      <!-- fim da documentação-->
+      <div class="floating-button">Menu Doc</div>
+      <%- include('partials/components/footer') %>
+    </main>
+    <script src="/javascripts/index.js"></script>
+</body>
+</html>
