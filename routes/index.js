@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  const urlBase = {url:'http://localhost:3000/'}
+const indexController = require('../controllers/index')
 
-  res.render('index', { urlBase });
-});
+/* GET home page. */
+router.get('/', indexController.home);
 
 router.get('/about', function(req, res, next) {
   res.render('about');
